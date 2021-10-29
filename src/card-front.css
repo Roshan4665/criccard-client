@@ -1,6 +1,6 @@
 
 .player-card-front{
-  z-index: 1;
+  z-index: 2;
     border-radius: 10px;
     position: absolute;
     top: 0;
@@ -66,7 +66,7 @@
     height: 40px;
     padding-right: 5px;
     color: #EB2F5B;
-    z-index: 1;
+    z-index: 5;
   }
   .click-register{
     position: absolute;
@@ -74,7 +74,7 @@
     height: 375px;
     width: 300px;
     z-index: 3;
-    background-color: wheat;
+    /* background-color: wheat; */
   }
   .rotate {
     animation: rotate-keyframes 1s forwards;
@@ -106,7 +106,7 @@
   
 
   @media (min-width:600px) {
-    .player-card{
+    .player-card-front{
       cursor: pointer;
     }
     

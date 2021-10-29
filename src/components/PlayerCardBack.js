@@ -1,9 +1,14 @@
 import React from 'react'
+import './../card-back.css'
 
 const PlayerCardBack = (props) => {
+    const rotate=props.onRotate;
     return (
         <>
-        <div className="card-back">Hello</div>
+        <div className="player-card-back">
+            <h1  onClick={()=>{rotate()}}>Hello</h1>
+            </div>
+
         </>
     )
 }
