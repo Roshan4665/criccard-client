@@ -1,15 +1,18 @@
 
-.player-card{
-    z-index: 0;
+.player-card-front{
+  z-index: 1;
     border-radius: 10px;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 440px;
     width: 300px;
     background-color: black;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     display: inline-block;
-    margin: 2rem;
+    /* margin: 2rem; */
     text-align: start;
+    backface-visibility: hidden;
   }
   .card-img{
     z-index: 0;
@@ -63,14 +66,44 @@
     height: 40px;
     padding-right: 5px;
     color: #EB2F5B;
+    z-index: 1;
   }
   .click-register{
     position: absolute;
     top: 0;
     height: 375px;
     width: 300px;
-    z-index: 2;
+    z-index: 3;
+    background-color: wheat;
   }
+  .rotate {
+    animation: rotate-keyframes 1s forwards;
+   }
+   
+   @keyframes rotate-keyframes {
+    from {
+     transform: rotateY(0deg);
+    }
+   
+    to {
+     transform: rotateY(180deg);
+    }
+   }
+   
+   .rotate-again {
+    animation: rotate-again-keyframes 1s forwards;
+   }
+
+   @keyframes rotate-again-keyframes {
+    from {
+     transform: rotateY(180deg);
+    }
+   
+    to {
+     transform: rotateY(360deg);
+    }
+   }
+  
 
   @media (min-width:600px) {
     .player-card{
