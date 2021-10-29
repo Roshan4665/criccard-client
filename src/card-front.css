@@ -1,0 +1,80 @@
+
+.player-card{
+    z-index: 0;
+    border-radius: 10px;
+    position: relative;
+    height: 440px;
+    width: 300px;
+    background-color: black;
+    margin-top: 5vh;
+    display: inline-block;
+    margin: 2rem;
+    text-align: start;
+  }
+  .card-img{
+    z-index: 0;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .overlay{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    z-index: 1;
+    background-image:radial-gradient(farthest-side at 60% 20%, rgb(256, 256, 256, 0),rgb(256, 256, 256, 0), rgb(0, 0, 0, 1));
+    top:0%;
+    
+  }
+  .player-details{
+    text-align: center;
+    position: absolute;
+    top: 280px;
+    width: 300px;
+    color: white;
+  }
+  .view-count{
+    margin-top: -10px;
+    position: absolute;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .view-icon{
+    height: 40px;
+    padding-right: 5px;
+  }
+  .favourite-selection{
+    margin-top: -3px;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .heart-icon{
+    transform: scale(1.2);
+    height: 40px;
+    padding-right: 5px;
+    color: #EB2F5B;
+  }
+  .click-register{
+    position: absolute;
+    top: 0;
+    height: 375px;
+    width: 300px;
+    z-index: 2;
+  }
+
+  @media (min-width:600px) {
+    .player-card{
+      cursor: pointer;
+    }
+    
+  }
