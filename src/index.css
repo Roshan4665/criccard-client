@@ -24,13 +24,14 @@ body{
   align-items: center;
 }
 
+.player-profile{
+  display: flexbox;
+}
 
 
 
 
-@media (max-width:600px) {
-  .profile-page{
-    flex-direction: column;
-  }
+@media (min-width:600px) {
+
   
 }

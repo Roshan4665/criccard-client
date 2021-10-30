@@ -2,14 +2,17 @@
 .player-card{
     z-index: 0;
     border-radius: 10px;
-    position: relative;
+    position: absolute;
     height: 440px;
     width: 300px;
     background-color: black;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     display: inline-block;
-    margin: 2rem;
+    /* margin: 2rem; */
     text-align: start;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
   }
   .card-img{
     z-index: 0;
@@ -71,6 +74,7 @@
     width: 300px;
     z-index: 2;
   }
+
 
   @media (min-width:600px) {
     .player-card{

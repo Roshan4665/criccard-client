@@ -9,10 +9,11 @@ const PlayerCardFront = (props) => {
     const player=props.player;
     const [fav, setfav] = useState(false);
     const [favCount, setfavCount] = useState(120);
+    const rotate=props.onRotate;
     return (
     
         <div className="player-card">
-            <div className="click-register" onClick={()=>{console.log("clicked");}}/>
+            <div className="click-register" onClick={()=>{rotate()}}/>
             <img src={`https://res.cloudinary.com/dfwh8gb6y/image/upload/v1635448141/${parseInt(player._id)}.png`} alt="player" className="card-img"/>
          
             <div className="overlay"/>
