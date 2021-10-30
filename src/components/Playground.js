@@ -1,3 +1,5 @@
+
+//Background of all card collection
 import React from 'react'
 import PlayerCard from "./PlayerCard";
 const Playground = (props) => {
@@ -8,7 +10,7 @@ const Playground = (props) => {
          
     )
 }
-//0.batting.ODI
+
 const CreateCards=(playerList)=>
 {
     let cards=[];

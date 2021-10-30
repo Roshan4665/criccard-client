@@ -3,15 +3,18 @@
    position: absolute;
    top: 0;
     left: 0;
+    /* background-color: rgb(243, 225, 243); */
     background-color: black;
      height: 440px;
     width: 300px;
     border-radius: 10px;
-    color: blanchedalmond;
+    color: whitesmoke;
+    transform: translateZ(20px);
 }
+
 .rotated-y-container{
     position: absolute;
-    transform: rotateY(180deg);
+    /* transform: rotateY(180deg); */
     height: 100%;
     width: 100%;
     top: 0;
@@ -25,12 +28,12 @@
     height: 40px;
     width: 40px;
     border-radius: 100%;
-    background-color: blue;
+    background-color: #EB2F5B;
 }
 .back-icon{
     position: absolute;
     top: 50%;
-    left: 65%;
+    left: 62%;
     transform: translate(-50%, -50%);
     font-size: 25px;
     color: white;
@@ -44,20 +47,12 @@
     width: 240px;
     height: 40px;
 }
-.sidebar{
-    position: absolute;
-    right: 0;
-    top: 70px;
-    height: 300px;
-    background-color: grey;
-    width: 30px;
-}
 .bottom-bar{
     position: absolute;
     bottom: 0;
     height: 40px;
     width: 100%;
-    background-color: blue;
+    background-color: #EB2F5B;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     display: flex;

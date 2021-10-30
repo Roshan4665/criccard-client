@@ -1,6 +1,6 @@
 
 import eye from './images/eye.png';
-import './../card-front.css';
+import './components-css/card-front.css';
 import { useState } from 'react';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';

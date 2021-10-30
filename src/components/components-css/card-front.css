@@ -13,6 +13,10 @@
     top: 0;
     left: 0;
     backface-visibility: hidden;
+    transform: translateZ(-20px);
+    transform: rotateY(180deg);
+    
+    
   }
   .card-img{
     z-index: 0;
@@ -35,6 +39,7 @@
     
   }
   .player-details{
+   
     text-align: center;
     position: absolute;
     top: 280px;

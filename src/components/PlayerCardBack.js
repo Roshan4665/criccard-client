@@ -1,5 +1,5 @@
 import React from 'react'
-import './../card-back.css'
+import './components-css/card-back.css'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
@@ -8,6 +8,27 @@ import BallIcon from './images/cricket-ball.png';
 import Player from './../playerDBModel';
 import BattingStats from './BattingStats';
 import BowlingStats from './BowlingStats';
+
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@emotion/react';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#34eb3d',
+    },
+    neutral: {
+      main: '#64748B',
+      contrastText: '#fff',
+    },
+  },
+});
+
+
+
+
+
+
 
 
 const PlayerCardBack = (props) => {
@@ -31,8 +52,8 @@ const PlayerCardBack = (props) => {
                         {player.name}
                     </div>
                     <div className="batting-selector-column">
-                        <Button variant={IsBatting ? "contained" : "outlined"} color="primary" onClick={() => setIsBatting(true)} className="mui-button"> Batting <img src={BatIcon} /></Button>
-                        <Button variant={IsBatting ? "outlined" : "contained"} color="primary" onClick={() => { setIsBatting(false) }} className="mui-button">Bowling <img src={BallIcon} /></Button>
+                   <ThemeProvider theme={theme}>   <Button variant={IsBatting ? "contained" : "outlined"} color="primary" onClick={() => setIsBatting(true)} className="mui-button"> Batting <img src={BatIcon} /></Button></ThemeProvider>
+                   <ThemeProvider theme={theme}>        <Button variant={IsBatting ? "outlined" : "contained"} color="primary" onClick={() =>  setIsBatting(false) } className="mui-button">Bowling <img src={BallIcon} style={{transform:"scale(0.9)"}}/></Button></ThemeProvider>
                     </div>
                     <div className="stats">
                         <div className="batting-stats">
