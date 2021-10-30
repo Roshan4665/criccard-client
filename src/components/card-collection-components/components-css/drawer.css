@@ -1,0 +1,28 @@
+.user-profile{
+    width: 300px;
+    max-width: 70vw;
+    display: flexbox;
+    text-align: center;
+
+}
+.avatar{
+    margin-top: 1rem;
+    height: 150px;
+    /* margin-bottom: -1rem; */
+}
+.bottom-info-bar{
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    background-color: black;
+    width: 100%;
+    color: blanchedalmond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.drawer-item{
+    width: 100%;
+    font-family: 'Candal', sans-serif !important;
+
+}

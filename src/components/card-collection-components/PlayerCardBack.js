@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import { useState } from 'react';
 import BatIcon from './images/cricket-bat.png';
 import BallIcon from './images/cricket-ball.png';
-import Player from './../playerDBModel';
+// import Player from './../playerDBModel';
 import BattingStats from './BattingStats';
 import BowlingStats from './BowlingStats';
 
@@ -33,8 +33,7 @@ const theme = createTheme({
 
 const PlayerCardBack = (props) => {
     const rotate = props.onRotate;
-    let player = Player;
-    player = props.player;
+    const player = props.player;
     const [IsBatting, setIsBatting] = useState(true);
 
 
