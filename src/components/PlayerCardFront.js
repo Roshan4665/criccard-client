@@ -12,8 +12,8 @@ const PlayerCardFront = (props) => {
     const rotate=props.onRotate;
     return (
     
-        <div className="player-card-front">
-            <div className="click-register" onClick={()=>{rotate(); console.log("clicked")}}/>
+        <div className="player-card">
+            <div className="click-register" onClick={()=>{rotate()}}/>
             <img src={`https://res.cloudinary.com/dfwh8gb6y/image/upload/v1635448141/${parseInt(player._id)}.png`} alt="player" className="card-img"/>
          
             <div className="overlay"/>

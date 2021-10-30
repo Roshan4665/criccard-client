@@ -1,25 +1,25 @@
-import React from 'react';
-import PlayerCardFront from './PlayerCardFront';
-import PlayerCardBack from './PlayerCardBack';
-import { useState, useEffect } from 'react';
-
+import React from 'react'
+import PlayerCardFront from './PlayerCardFront'
+import PlayerCardBack from './PlayerCardBack'
+import './../rotatable-card.css'
+import { useState } from 'react'
 
 const PlayerCard = (props) => {
-    const player=props.player;
-    let [isFlipped, setIsFlipped] = useState(false);
-    function rotationHandler()
-    {
+    const player = props.player;
+    const [isFlipped, setIsFlipped] = useState(false);
+    function rotateHandler() {
         setIsFlipped(!isFlipped);
     }
+
     return (
-        <div className="flip-card">
-                <div className={"flip-card-inner "+(isFlipped?"rotate":"rotate-again")}>
-                 <PlayerCardFront player={player} onRotate={rotationHandler}/> 
-                 <PlayerCardBack player={player} onRotate={rotationHandler}/>
-                </div>
+        <div class="flip-card">
+            <div class={"flip-card-inner "+ (isFlipped?"rotate":"rotate-forward")}>
+                <PlayerCardFront class="flip-card-front" player={player} onRotate={rotateHandler}/>
+                  
+                <PlayerCardBack class="flip-card-back" player={player} onRotate={rotateHandler}/>
+            </div>
         </div>
-        )
-  
+    )
 }
 
 export default PlayerCard

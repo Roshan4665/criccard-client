@@ -1,10 +1,8 @@
 
-.player-card-front{
-  z-index: 2;
+.player-card{
+    z-index: 0;
     border-radius: 10px;
     position: absolute;
-    top: 0;
-    left: 0;
     height: 440px;
     width: 300px;
     background-color: black;
@@ -12,6 +10,8 @@
     display: inline-block;
     /* margin: 2rem; */
     text-align: start;
+    top: 0;
+    left: 0;
     backface-visibility: hidden;
   }
   .card-img{
@@ -66,47 +66,18 @@
     height: 40px;
     padding-right: 5px;
     color: #EB2F5B;
-    z-index: 5;
   }
   .click-register{
     position: absolute;
     top: 0;
     height: 375px;
     width: 300px;
-    z-index: 3;
-    /* background-color: wheat; */
+    z-index: 2;
   }
-  .rotate {
-    animation: rotate-keyframes 1s forwards;
-   }
-   
-   @keyframes rotate-keyframes {
-    from {
-     transform: rotateY(0deg);
-    }
-   
-    to {
-     transform: rotateY(180deg);
-    }
-   }
-   
-   .rotate-again {
-    animation: rotate-again-keyframes 1s forwards;
-   }
 
-   @keyframes rotate-again-keyframes {
-    from {
-     transform: rotateY(180deg);
-    }
-   
-    to {
-     transform: rotateY(360deg);
-    }
-   }
-  
 
   @media (min-width:600px) {
-    .player-card-front{
+    .player-card{
       cursor: pointer;
     }
     
