@@ -12,8 +12,6 @@
     text-align: start;
     top: 0;
     left: 0;
-    backface-visibility: hidden;
-    transform: translateZ(-20px);
     transform: rotateY(180deg);
     
     

@@ -3,10 +3,11 @@
     background-color: transparent;
     height: 440px;
     width: 300px;
-    perspective: 3000px; 
+    perspective: 2000px; 
     display: inline-block;
     position: relative;
     margin: 2rem;
+    
   }
   
   .flip-card-inner {
@@ -15,7 +16,9 @@
     height: 100%;
     text-align: center;
     transform-style: preserve-3d;
- 
+  }
+  .blur-shadow{
+    /* filter: drop-shadow(0 0 0.75rem rgb(17, 1, 6)); */
   }
   
 
@@ -33,11 +36,11 @@
    
    @keyframes rotate-keyframes {
     from {
-     transform: rotateY(180deg);
+     transform: rotateY(0deg);
     }
    
     to {
-     transform: rotateY(360deg);
+     transform: rotateY(180deg);
     }
    }
 
@@ -47,31 +50,12 @@
    
    @keyframes rotate-forward-keyframes {
     from {
-     transform: rotateY(0deg);
+     transform: rotateY(180deg);
     }
    
     to {
-     transform: rotateY(180deg);
+     transform: rotateY(0deg);
     }
    }
 
-   .thick-right{
-     position: absolute;
-     top:0;
-     right: 30px;
-     height: 100%;
-     /* background-color: black; */
-     width: 40px;
-     transform: rotateY(90deg);
-     border-radius: 10px;
-   }
-   .thick-left{
-     position: absolute;
-     top:0;
-     left: -25px;
-     height: 100%;
-     /* background-color: black; */
-     width: 40px;
-     transform: rotateY(-90deg);
-     border-radius: 10px;
-  }
+ 

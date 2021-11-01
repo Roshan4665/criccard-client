@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
-
-import Playground from "./components/card-collection-components/Playground";
-import Navbar from "./components/card-collection-components/Navbar";
 import getPlayers from './services/player';
 import Loader from './components/card-collection-components/Loader';
 import CollectionPage from './CollectionPage';
+import HomePage from './HomePage';
+import QuickGamePage from './QuickGamePage';
+import MultiPlayerPage from './MultiPlayerPage';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 let playerList=[{
   name:"Please refresh",
@@ -14,7 +21,6 @@ let playerList=[{
 
 function App() {
   const[loaded, setLoaded]=useState(false);
-  // const [searchedPlayerList, setSearchedPlayerList] = useState(playerList);
  
   useEffect(()=>{
     getPlayers().then(res=>{
@@ -24,11 +30,24 @@ function App() {
   }, []);
 
 
-
+//    
   return (
-    <div>
-      {loaded? <CollectionPage playerList={playerList}/>:<Loader/>}
-    </div>
+      <Router>
+        <Switch>
+          <Route path="/collection">
+          {loaded? <CollectionPage playerList={playerList}/>:<Loader/>}
+          </Route>
+          <Route path="/quick-game">
+          {loaded? <QuickGamePage playerList={playerList}/>:<Loader/>}
+          </Route>
+          <Route path="/multi-player">
+            <MultiPlayerPage playerList={playerList}/>
+          </Route>
+          <Route path="/">
+            <HomePage/>
+          </Route>
+        </Switch>
+      </Router>
   );
 }
 

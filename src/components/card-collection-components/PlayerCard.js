@@ -10,10 +10,13 @@ const PlayerCard = (props) => {
     function rotateHandler() {
         setIsFlipped(!isFlipped);
     }
+    let light=false;
+    if(player.batting.runs>10000)
+    light=true;
 
     return (
-        <div class="flip-card">
-            <div class={"flip-card-inner "+ (isFlipped?"rotate":"rotate-forward")}>
+        <div className="flip-card">
+            <div className={"flip-card-inner "+ (isFlipped?"rotate-forward ":"rotate ")}>
                 <PlayerCardFront class="flip-card-front" player={player} onRotate={rotateHandler}/>
                 <div className="thick-right"></div>
                 <div className="thick-left"></div>

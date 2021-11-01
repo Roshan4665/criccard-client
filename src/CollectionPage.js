@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 
 import Playground from "./components/card-collection-components/Playground";
 import Navbar from "./components/card-collection-components/Navbar";
