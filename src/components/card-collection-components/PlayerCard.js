@@ -10,18 +10,16 @@ const PlayerCard = (props) => {
     function rotateHandler() {
         setIsFlipped(!isFlipped);
     }
-    let light=false;
-    if(player.batting.runs>10000)
-    light=true;
+
 
     return (
-        <div className="flip-card">
+        <div className="flip-card" style={{transform: (props.gameMode?'scale(0.7)':'scale(1)'),transformOrigin:"top center", height:(props.gameMode?"308px":""), margin:(props.gameMode?'0':"")}}>
             <div className={"flip-card-inner "+ (isFlipped?"rotate-forward ":"rotate ")}>
-                <PlayerCardFront class="flip-card-front" player={player} onRotate={rotateHandler}/>
+                <PlayerCardFront class="flip-card-front"  frontInfo={props.frontInfo} player={player} gameMode={props.gameMode} onRotate={rotateHandler}/>
                 <div className="thick-right"></div>
                 <div className="thick-left"></div>
                   
-                <PlayerCardBack class="flip-card-back" player={player} onRotate={rotateHandler}/>
+                <PlayerCardBack class="flip-card-back" selected={props.selected} player={player} onRotate={rotateHandler} gameMode={props.gameMode} onPress={props.onPress}/>
             </div>
         </div>
     )

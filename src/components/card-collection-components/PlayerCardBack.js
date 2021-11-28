@@ -3,8 +3,8 @@ import './components-css/card-back.css'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
-import BatIcon from './images/cricket-bat.png';
-import BallIcon from './images/cricket-ball.png';
+import BatIcon from './../images/cricket-bat.png';
+import BallIcon from './../images/cricket-ball.png';
 // import Player from './../playerDBModel';
 import BattingStats from './BattingStats';
 import BowlingStats from './BowlingStats';
@@ -41,7 +41,7 @@ const PlayerCardBack = (props) => {
 
     return (
         <>
-            <div className="player-card-back">
+            <div className="player-card-back" style={{overflow:"hidden"}}>
 
                 <div className="rotated-y-container" >
                     <div className="back-icon-circle" onClick={() => { rotate() }}>
@@ -57,8 +57,8 @@ const PlayerCardBack = (props) => {
                     <div className="stats">
                         <div className="batting-stats">
                             {IsBatting?
-                                <BattingStats player={player}/>:
-                            <BowlingStats player={player}/>
+                                <BattingStats player={player} gameMode={props.gameMode} onPress={props.onPress}/>:
+                            <BowlingStats player={player} gameMode={props.gameMode} onPress={props.onPress}/>
                             }
 
                         </div>
@@ -66,8 +66,8 @@ const PlayerCardBack = (props) => {
 
 
 
-                    <div className="bottom-bar">
-                        1000 🪙
+                    <div className="bottom-bar" onClick={() => { rotate(); if(props.gameMode) props.selected() }}>
+                        {props.gameMode?"Select":"1000 🪙"}
                     </div>
 
 

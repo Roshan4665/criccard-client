@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL:"http://localhost:5000/api/cards",
+    baseURL:"https://protected-waters-44858.herokuapp.com/api/cards",
     headers:{
         "Content-type":"application/json"
     }

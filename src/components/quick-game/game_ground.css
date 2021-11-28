@@ -1,0 +1,313 @@
+.full-screen-playground{
+    height: 100%;
+}
+.game-board{
+
+    position: relative;
+    background: linear-gradient(  #3dcaf5, #f1536d);
+    height: 98vh;
+    width: 600px;
+    max-width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1vh;   
+}
+@media screen and (max-width: 600px) {
+    .game-board{
+        height: 100vh;
+        overflow: auto;
+        border-radius: 0px;
+        margin-top: 0;
+    }
+}
+    
+
+/* .h-centre{
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    background-color: blue;
+  
+} */
+.my-half{
+    /* background-color: #093546; */
+    height: 50%;
+    overflow: auto;
+    position: relative;
+}
+.opponent-half{
+    /* background-color: #46093b; */
+    height: 50%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.timer-circle{
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    font-size: 1.2rem;
+    cursor: pointer;
+
+}
+.my-score{
+    background-color: rgb(41, 207, 248);
+    filter: drop-shadow(0 0 0.75rem rgb(41, 207, 248));
+    position:absolute;
+    top: 51%;
+    height: 90px;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    border-radius: 5px;
+    cursor: pointer;
+    left: 5px;
+
+}
+.opp-score{
+    flex-direction: column;
+    background-color: rgb(41, 248, 120);
+    filter: drop-shadow(0 0 0.75rem rgb(41, 248, 120));
+    pointer-events: none;
+    border-radius: 5px;
+    position:absolute;
+    bottom: 51%;
+    height: 90px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    left: 5px;
+    z-index: 12;
+    color: white;
+}
+.full-game-help{
+    background-color: rgb(245, 7, 106);
+    filter: drop-shadow(0 0 0.75rem rgb(245, 7, 106));
+    position:absolute;
+    top: 2%;
+    height: 90px;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;   
+    border-radius: 5px;
+    cursor: pointer;
+    left: 5px;
+    z-index: 12;
+    text-align: center;
+
+}
+.refresh-left{
+    background-color: rgb(193, 245, 7);
+    filter: drop-shadow(0 0 0.75rem rgb(193, 245, 7));
+    position:absolute;
+    top: calc(53% + 90px);
+    height: 90px;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;   
+    border-radius: 5px;
+    left: 5px;
+    z-index: 12;
+    text-align: center;
+
+}
+.into-the-screen{
+    position: absolute;
+    /* top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    animation-duration: 0.6s;
+    animation-name: slidein;
+    animation-timing-function: ease-in;
+    transform-origin: top left;
+}
+@keyframes slidein{
+    from{
+      top: 2%;
+      left: 0%;
+      transform: scale(0.1) translate(0%,0%);
+        
+    }
+    to{
+        top: 50%;
+        left: 50%;
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
+
+.op-into-the-screen{
+    position: absolute;
+    animation-duration: 0.6s;
+    animation-name: opslidein;
+    animation-timing-function: ease-in;
+    transform-origin: top left;
+}
+@keyframes opslidein{
+    from{
+      top: calc(98% - 90px);
+      left: 0%;
+      transform: scale(0.1) translate(0%,0%);
+        
+    }
+    to{
+        top: 50%;
+        left: 50%;
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
+.centre-align{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.glass{
+    background: rgba(255, 255, 255, .7);
+    /* -webkit-backdrop-filter: blur(10px); */
+    backdrop-filter: blur(20px);
+}
+.in-game-instruction{
+    text-align: center;
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: greenyellow;
+    color: red;
+    animation-duration: 1s;
+    animation-name: scale-in-out;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    transform-origin: top left;
+    z-index: 3;
+}
+.my-instruction{
+    background-color: red;
+    color: whitesmoke;
+}
+@keyframes scale-in-out{
+   0%{
+       transform: scale(0.95) translate(-50%, -50%);
+   }
+    50%{
+         transform: scale(1) translate(-50%, -50%);
+    }
+    100%{
+        transform: scale(0.95) translate(-50%, -50%);
+    }
+}
+.bright-animate{
+    animation-duration: 1s;
+    animation-name: bright-in-out;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    transform-origin: top left;
+}
+@keyframes bright-in-out{
+   0%{
+    filter: drop-shadow(0 0 0.75rem rgb(41, 248, 120));
+   }
+    50%{
+        filter: drop-shadow(0 0 0.75rem rgb(248, 41, 51));
+    }
+   
+    100%{
+        filter: drop-shadow(0 0 0.75rem rgb(41, 248, 120));
+    }
+}
+.hide-bg{
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(20px);
+}
+
+/* Ripple effect */
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+  }
+  .ripple:hover {
+    background: rgb(19, 175, 214) radial-gradient(circle, transparent 1%, rgb(99, 221, 252) 1%) center/15000%;
+  }
+  .ripple:active {
+    background-color: rgb(19, 175, 214);
+    background-size: 100%;
+    transition: background 0s;
+  }
+
+  .ripple-info {
+    background-position: center;
+    transition: background 0.8s;
+  }
+  .ripple-info:hover {
+    background: rgb(228, 9, 100) radial-gradient(circle, transparent 1%, rgb(255, 6, 110) 1%) center/15000%;
+  }
+  .ripple-info:active {
+    background-color: rgb(238, 131, 175);
+    background-size: 100%;
+    transition: background 0s;
+  }
+  
+  /* Button style */
+  .card-button {
+    cursor: pointer;
+    color: white;
+    outline: none;
+  }
+
+.animate-runaway-grid{
+    animation-duration: 1s;
+    animation-name: run-away-grid;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    transform-origin: top left;
+}
+@keyframes run-away-grid{
+   0%{
+    transform: scale(1) translate(-50%, -50%);
+   }
+    50%{
+         transform: scale(1.5) translate(-50%, -50%);
+    }
+    100%{
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
+.rotate360{
+    animation-duration: 1s;
+    animation-name: rotate360;
+    /* animation-timing-function: ease-in; */
+    animation-iteration-count: 1;
+    /* transform-origin: top left; */
+}
+@keyframes rotate360{
+   0%{
+    transform: rotate(0deg);
+   }
+    100%{
+        transform: rotate(360deg);
+    }
+}

@@ -3,7 +3,7 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
 import { useState } from 'react';
-import image from './images/gogeta.jpg'
+import image from './../images/gogeta.jpg'
 import './components-css/drawer.css'
 import Divider from '@mui/material/Divider';
 import { ButtonBase } from '@mui/material';

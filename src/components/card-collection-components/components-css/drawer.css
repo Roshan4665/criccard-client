@@ -3,6 +3,7 @@
     max-width: 70vw;
     display: flexbox;
     text-align: center;
+    margin-bottom: 70px;
 
 }
 .avatar{
@@ -11,15 +12,17 @@
     /* margin-bottom: -1rem; */
 }
 .bottom-info-bar{
-    position: absolute;
-    bottom: 0;
+    position: fixed;
     height: 70px;
     background-color: black;
-    width: 100%;
+    width: 300px;
+    max-width: 70vw;
+   
     color: blanchedalmond;
     display: flex;
     align-items: center;
     justify-content: center;
+    bottom: 0;
 }
 .drawer-item{
     width: 100%;

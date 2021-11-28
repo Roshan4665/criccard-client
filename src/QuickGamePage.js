@@ -1,9 +1,15 @@
 import React from 'react'
+import Playground from './components/quick-game/Playground'
 
-const QuickGamePage = () => {
+
+const QuickGamePage = (props) => {
+    const playerList=props.playerList;
+
+
     return (
         <div>
-            qucickagem
+            <Playground playerList={playerList} />
+
         </div>
     )
 }

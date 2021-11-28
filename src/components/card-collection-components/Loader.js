@@ -1,4 +1,4 @@
-import loadingSVG from "./images/loading.svg";
+import loadingSVG from "./../images/loading.svg";
 
 const Loader = () => {
     return (
