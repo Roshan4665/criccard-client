@@ -8,7 +8,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 const PlayerCardFront = (props) => {
     const player=props.player;
     const [fav, setfav] = useState(false);
-    const [favCount, setfavCount] = useState(120);
+    const [favCount, setfavCount] = useState(parseInt(Math.random()*250));
     const rotate=props.onRotate;
     return (
     
@@ -23,7 +23,7 @@ const PlayerCardFront = (props) => {
                <div className="view-count">
                
                    <img src={eye} className="view-icon" alt="views-icon"/>
-                   256
+                   {parseInt(Math.random()*250)}
                </div>
                <div className="favourite-selection">
                   { fav?<FavoriteIcon className="heart-icon" key={`${player._id}heart`} onClick={()=>{setfav(false); setfavCount(favCount-1)}}/>:<FavoriteBorderIcon className="heart-icon" onClick={()=>{setfav(true); setfavCount(favCount+1)}} />}
